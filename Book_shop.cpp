@@ -1,15 +1,19 @@
 //Benson Ostler Book shop in C++
+#import libraries (if needed)
 #include<iostream>
 #include<string.h>
 #include<stdlib.h>
 
 using namespace std;
 
+#create the class that categorizes the books 
 class book	{
-private:
+private: 
+#These variables will only be available to the book class
 	char *author,*title,*publisher;
 	float *price;
 	int *stock;
+#these are global variables
 public:	
 	book()	{
 	author= new char[20];
@@ -25,8 +29,9 @@ public:
 	void buybook();
 	
 };
-
+#cout in c++ is "print" in python
 void book::feeddata()	{
+#get info from user
 	cin.ignore();
 	cout<<"\nEnter Author Name: ";      cin.getline(author,20);
 	cout<<"Enter Title Name: ";       cin.getline(title,20);
@@ -54,14 +59,14 @@ void book::showdata()	{
 	cout<<"\nStock Position: "<<*stock;   
 	
 }
-
+#see if book is in stock
 int book::search(char tbuy[20],char abuy[20] )	{
 	if(strcmp(tbuy,title)==0 && strcmp(abuy,author)==0)
 		return 1;
 	else return 0;
 		
 }
-
+#calculate the total for the customer
 void book::buybook()	{
 	int count;
 	cout<<"\nEnter Number Of Books to buy: ";
@@ -74,7 +79,7 @@ void book::buybook()	{
 	else
 		cout<<"\nRequired Copies not in Stock";
 }
-
+#excecute the program
 int main()	{
 	book *B[20];
 	int i=0,r,t,choice;
