@@ -16,7 +16,7 @@ stock” is displayed.
 
 The purpose of this software was mainly to train me in the language of C++ to develop my skills as a programmer
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/p_xWo3OXHaU)
 
 # Development Environment
 
